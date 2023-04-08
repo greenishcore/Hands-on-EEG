@@ -1,0 +1,12 @@
+#idea
+.idea/
+#checkpoint
+.ipynb_checkpoints/
+#dataset
+eegdata/
+eegdata_rnn/
+ex_data/
+#runs
+runs/
+#saved models
+*.
