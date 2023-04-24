@@ -1,0 +1,89 @@
+clc;
+clear;
+close all;
+pathname='E:\运动EEG数据集\files\S014\';
+load('E:\运动EEG数据集\files\S014\S014R05.mat');
+x=record;
+n=6;
+% Theta=[]
+Alpha=[];
+% Beta=[];
+Gamma=[];
+% for i=1:size(x,1)
+%     A=x(i,:);
+%     wpt=wpdec(A,n,'db20');
+%     cfs01=wprcoef(wpt,[6 4]);
+%     cfs02=wprcoef(wpt,[6 5]);
+%     cfs03=wprcoef(wpt,[6 6]);
+%     cfs04=wprcoef(wpt,[6 7]);
+%     cfs0=cfs01+cfs02+cfs03+cfs04;
+%     %filename=sprintf('Theta-%d',i);
+%     %save([pathname,filename],'cfs0');
+%     filename='result1';
+%     Theta=[Theta;cfs0];
+%     save([pathname,filename],'Theta');
+% end
+
+for i=1:size(x,1)
+    A=x(i,:);
+    wpt=wpdec(A,n,'db20');
+    cfs01=wprcoef(wpt,[6 8]);
+    cfs02=wprcoef(wpt,[6 9]);
+    cfs03=wprcoef(wpt,[6 10]);
+    cfs04=wprcoef(wpt,[6 11]);
+    cfs05=wprcoef(wpt,[6 12]);
+    cfs0=cfs01+cfs02+cfs03+cfs04+cfs05;
+    %filename=sprintf('Theta-%d',i);
+    %save([pathname,filename],'cfs0');
+    filename='result1';
+    Alpha=[Alpha;cfs0];
+    save([pathname,filename],'Alpha');
+end
+% for i=1:size(x,1)
+%     A=x(i,:);
+%     wpt=wpdec(A,n,'db20');
+%     cfs01=wprcoef(wpt,[6 13]);
+%     cfs02=wprcoef(wpt,[6 14]);
+%     cfs03=wprcoef(wpt,[6 15]);
+%     cfs04=wprcoef(wpt,[6 16]);
+%     cfs05=wprcoef(wpt,[6 17]);
+%     cfs06=wprcoef(wpt,[6 18]);
+%     cfs07=wprcoef(wpt,[6 19]); 
+%     cfs08=wprcoef(wpt,[6 20]);
+%     cfs09=wprcoef(wpt,[6 21]);
+%     cfs10=wprcoef(wpt,[6 22]);
+%     cfs11=wprcoef(wpt,[6 23]);
+%     cfs12=wprcoef(wpt,[6 24]);
+%     cfs13=wprcoef(wpt,[6 25]);
+%     cfs14=wprcoef(wpt,[6 26]);
+%     cfs15=wprcoef(wpt,[6 27]);
+%     cfs16=wprcoef(wpt,[6 28]);
+%     cfs17=wprcoef(wpt,[6 29]);  
+%     cfs0=cfs01+cfs02+cfs03+cfs04+cfs05+cfs06+cfs07+cfs08+cfs09+cfs10+cfs11+cfs12+cfs13+cfs14+cfs15+cfs16+cfs17;
+%     %filename=sprintf('Theta-%d',i);
+%     %save([pathname,filename],'cfs0');
+%     filename='result3';
+%     Beta=[Beta;cfs0];
+%     save([pathname,filename],'Beta');
+% end 
+for i=1:size(x,1)
+    A=x(i,:);
+    wpt=wpdec(A,n,'db20');
+    cfs10=wprcoef(wpt,[6 39]);
+    cfs11=wprcoef(wpt,[6 40]);
+    cfs12=wprcoef(wpt,[6 41]);
+    cfs13=wprcoef(wpt,[6 42]);
+    cfs14=wprcoef(wpt,[6 43]);
+    cfs15=wprcoef(wpt,[6 44]);
+    cfs16=wprcoef(wpt,[6 45]);
+    cfs17=wprcoef(wpt,[6 46]);
+    cfs18=wprcoef(wpt,[6 47]);
+    cfs19=wprcoef(wpt,[6 48]);
+    cfs20=wprcoef(wpt,[6 49]);
+    cfs0=cfs10+cfs11+cfs12+cfs13+cfs14+cfs15+cfs16+cfs17+cfs18+cfs19+cfs20;
+    %filename=sprintf('Theta-%d',i);
+    %save([pathname,filename],'cfs0');
+    filename='result2';
+    Gamma=[Gamma;cfs0];
+    save([pathname,filename],'Gamma');
+end 
