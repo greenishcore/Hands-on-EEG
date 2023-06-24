@@ -20,8 +20,8 @@ raw csv file -> [open/NN/cnn_old/code/process.ipynb](open/NN/cnn_old/code/proces
 ### 文件夹说明
 - [open/NN/cnn_old/code/](open/NN/cnn_old/code)：早期CNN模型代码（勿用，仅作参考）
 - [open/NN/dataset/](open/NN/dataset)：数据集
-- [open/NN/lstm/code/](open/NN/lstm/code)：LSTM模型代码
-- [open/NN/rnn/code/](open/NN/rnn/code)：RNN模型代码
+- [open/NN/lstm/code/](open/NN/lstm/code)：LSTM模型代码（勿用，性能差）
+- [open/NN/rnn/code/](open/NN/rnn/code)：RNN模型代码（勿用，性能差）
 - [open/NN/transformer_old/code/](open/NN/transformer_old/code)：早期Transformer模型代码（勿用，仅作参考）
 - [open/NN/cnn/code/](open/NN/cnn/code)：CNN模型代码
 - [open/NN/transformer/code/](open/NN/transformer/code)：Transformer模型代码
