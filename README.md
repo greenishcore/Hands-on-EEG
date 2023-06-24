@@ -1,7 +1,7 @@
 # Hands-on-EEG
 ## Graduation project
-Handle EEG signal for classication using ANN
-
+Handle EEG signal for classication using ANN  
+（这是本项目的公开分支，在使用cuda上的一些实践可切换至其他分支）
 ### 提示（hint）
 本项目使用EMOTIV Plex采集脑电信号，并使用EMOTIV PRO软件进行导出，导出格式为CSV格式，
 设计神经网络模型，对脑电信号进行分类，最终实现脑电信号的分类。  
