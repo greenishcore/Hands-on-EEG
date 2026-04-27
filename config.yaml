@@ -1,0 +1,76 @@
+# ============================================================
+# Hands-on-EEG  –  example configuration file
+# ============================================================
+# Copy this file and adapt it for your environment.
+# All paths support both absolute and relative forms;
+# relative paths are resolved from the repository root.
+#
+# Override individual values with environment variables:
+#   EEG_DATA_DIR, EEG_NUM_CHANNELS, EEG_SAMPLING_RATE,
+#   EEG_WINDOW_SIZE, EEG_MODEL_DIR, EEG_LOG_LEVEL, EEG_LOG_FILE
+# ============================================================
+
+data:
+  # Root directory that holds EEG CSV recordings.
+  # Use a relative path so the project is portable across machines.
+  data_dir: "data/raw"
+
+  # Expected number of EEG channels in each CSV file.
+  num_channels: 32
+
+  # Sampling rate of the EMOTIV Plex device (Hz).
+  sampling_rate: 128
+
+  # Sliding-window length in samples.
+  window_size: 128
+
+  # Step between consecutive windows (1 = fully overlapping).
+  window_step: 1
+
+  # Class labels (must match the folder / file naming convention).
+  labels:
+    - lefthand
+    - read
+    - rest
+    - walkbase
+    - walkl
+    - walkfocus
+
+visualization:
+  # Hex colour for EEG waveform traces.
+  color: "#00251C"
+
+  # Canvas title shown in the VisPy window.
+  title: "32-Channel EEG Data"
+
+  # Timer interval for the sliding-window animation (milliseconds).
+  animation_interval_ms: 10.0
+
+  # Trace line width in pixels.
+  line_width: 2
+
+model:
+  # Mini-batch size used during training.
+  batch_size: 32
+
+  # Total number of training epochs.
+  num_epochs: 100
+
+  # Initial learning rate.
+  learning_rate: 0.001
+
+  # Directory where trained model weights (*.pt) are saved.
+  model_dir: "models"
+
+  # Number of output classes (must match the length of data.labels).
+  num_classes: 6
+
+logging:
+  # Log level: DEBUG | INFO | WARNING | ERROR | CRITICAL
+  level: "INFO"
+
+  # Optional path to a log file.  Comment out to disable file logging.
+  # log_file: "logs/eeg.log"
+
+  # Log record format string.
+  format: "%(asctime)s [%(levelname)s] %(name)s: %(message)s"
